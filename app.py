@@ -1,4 +1,4 @@
-#https://dev.to/whitphx/build-a-web-based-real-time-computer-vision-app-with-streamlit-57l2
+
 import streamlit as st
 import cv2
 import numpy as np
@@ -6,7 +6,7 @@ from PIL import Image
 from keras.models import load_model
 @st.cache(allow_output_mutation=True)
 def load_model1():
-    model = load_model('C:/Users/renuk/OneDrive/Desktop/notebook/Own project/facemaskdetector_final/model/mobilenet_facemaskdetector.h5')
+    model = load_model('./model/mobilenet_facemaskdetector.h5')
     return model
 
 def facemaskdetector():
@@ -24,7 +24,7 @@ def facemaskdetector():
     frameST = st.empty()
 
     # We load the xml file
-    classifier = cv2.CascadeClassifier('C:/Users/renuk/OneDrive/Desktop/notebook/Own project/facemaskdetector_final/model/haarcascade_frontalface_default.xml')
+    classifier = cv2.CascadeClassifier('./model/haarcascade_frontalface_default.xml')
     while True:
         (rval, im) = webcam.read()
 
@@ -64,7 +64,7 @@ def main():
     activities=["About","Detection"]
     choice = st.sidebar.selectbox("select activity", activities)
     if choice == 'About':
-        img = Image.open("C:/Users/renuk/OneDrive/Desktop/notebook/Own project/facemaskdetector_final/image/img.jpeg")
+        img = Image.open("./image/img.jpeg")
         st.image(img, width=400, height=400)
         st.subheader("Face mask detector using MobileNet")
         st.markdown("Built with Streamlit by [Renuka Nale](https://github.com/Nale123)")
