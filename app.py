@@ -27,8 +27,10 @@ def facemaskdetector():
     classifier = cv2.CascadeClassifier('./model/haarcascade_frontalface_default.xml')
     while True:
         (rval, im) = webcam.read()
-
+	
         im = cv2.flip(im, 1, 1)  # Flip to act as a mirror
+	if im is None:
+		break
 
         # Resize the image to speed up detection
         mini = cv2.resize(im, (im.shape[1] // size, im.shape[0] // size))
