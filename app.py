@@ -19,7 +19,7 @@ def facemaskdetector():
     #def get_cap():
         #return cv2.VideoCapture(0)
 
-    webcam = cv2.VideoCapture(0)
+    webcam = cv2.VideoCapture(-1)
 
     frameST = st.empty()
 
