@@ -1,7 +1,7 @@
 # Face-mask-detector
 Real time face mask detection app using Streamlit.
 
-![demo](image/app_demp.mp4)
-<video width="320" height="240" controls>
-  <source src="(https://github.com/Nale123/Face-mask-detector/blob/main/image/app_demp.mp4" type="video/mp4">
-</video>
+
+Demo:
+
+![app_demo_gif](https://user-images.githubusercontent.com/55340518/112379890-13936100-8cbf-11eb-865b-913e09c2e907.gif)
