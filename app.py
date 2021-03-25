@@ -17,7 +17,7 @@ def facemaskdetector():
     size = 4
     @st.cache(allow_output_mutation=True)
     def get_cap():
-        return cv2.VideoCapture(0)
+        return cv2.VideoCapture(2)
 
     webcam = get_cap()
 
