@@ -15,11 +15,11 @@ def facemaskdetector():
     color_dict = {0: (0, 0, 255), 1: (0, 255, 0)}
 
     size = 4
-    #@st.cache(allow_output_mutation=True)
-    #def get_cap():
-        #return cv2.VideoCapture(0)
+    @st.cache(allow_output_mutation=True)
+    def get_cap():
+        return cv2.VideoCapture(0)
 
-    webcam = cv2.VideoCapture(-1)
+    webcam = get_cap()
 
     frameST = st.empty()
 
